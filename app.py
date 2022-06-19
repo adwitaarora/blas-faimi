@@ -31,25 +31,25 @@ def index():
         try:
             db.session.add(new_post)
             db.session.commit()
-            post = [post_content]
             language = translator.detect(post_content).lang
 
+            try:
+                if language == 'en' :
+                    prediction, certainity = analyseEnglish([post_content])
+                elif language == 'hi':
+                    prediction, certainity = analyseHindi([post_content])
+                else:
+                    post_content = translator.translate(post_content, dest='en')
+                    prediction, certainity = analyseEnglish([post_content])
+            except:
+                prediction = "Could Not Predict"
+                certainity = ""
+            post = [post_content, prediction]
             with open('input_posts.csv', 'a', encoding='UTF8', newline='') as f:
                 writer = csv.writer(f)
                 writer.writerow(post)
-            print(language)
-            try:
-                if language == 'en' :
-                    prediction, certainity = analyseEnglish(post_content)
-                elif language == 'hi':
-                    prediction, certainity = analyseHindi(post_content)
-                else:
-                    post_content = translator.translate(post_content, dest='en')
-                    prediction, certainity = analyseEnglish(post_content)
-            except:
-                prediction = "Could Not Predict"
-            print(prediction)
-            return render_template ('index.html')
+
+            return render_template ('index.html', prediction = prediction, certainity = certainity, predicted = False)
         except:
             return "Error Occurred"
     else:

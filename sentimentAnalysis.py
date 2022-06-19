@@ -14,31 +14,29 @@ class CustomModelPrediction(object):
     return predictions.tolist()
 
   @classmethod
-  def from_path(cls, model_dir):
+  def from_path(cls, model_dir, filename, processor_state):
     import tensorflow.keras as keras
     model = keras.models.load_model(
-      os.path.join(model_dir,'keras_saved_model_en_1800.h5'))
-    with open(os.path.join(model_dir, 'processor_state_en_1800.pkl'), 'rb') as f:
+      os.path.join(model_dir,filename))
+    with open(os.path.join(model_dir, processor_state), 'rb') as f:
       processor = pickle.load(f)
 
     return cls(model, processor)
 
 def analyseEnglish(test_requests):
-    classifier = CustomModelPrediction.from_path('.')
+    classifier = CustomModelPrediction.from_path('.','keras_saved_model_en_1800.h5','processor_state_en_1800.pkl')
     results = classifier.predict(test_requests)
     labels=['Negative','Neutral']
     for i in range(len(results)):
         for idx,val in enumerate(results[i]):
-            if val > 0.7:
-                return str(labels[idx]),  str(val)
+            if val > 0.4:
+              return str(labels[idx]),  str(val)
 
 def analyseHindi(test_requests):
-    classifier = CustomModelPrediction.from_path('.', 'keras_saved_model.h5', 'processor_state.pkl')
+    classifier = CustomModelPrediction.from_path('.', 'keras_saved_model_hin.h5', 'processor_state_hin.pkl')
     results = classifier.predict(test_requests)
     labels=['Negative','Neutral']
     for i in range(len(results)):
         for idx,val in enumerate(results[i]):
-            if val > 0.7:
-                return str(labels[idx]),  str(val)
-
-# analyseEnglish(['Hello this is an app'])
+            if val > 0.4:
+              return str(labels[idx]),  str(val)
