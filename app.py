@@ -17,7 +17,6 @@ db = SQLAlchemy(app)
 class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     content = db.Column(db.String(200), nullable=False)
-    # label = db.Column(db.String(200))
 
     def __repr__(self):
         return '<Post %r>' % self.content
