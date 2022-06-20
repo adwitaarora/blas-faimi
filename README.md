@@ -17,6 +17,9 @@ Find the project [here](https://blasfaimi.herokuapp.com/)
 
 <img width="1440" alt="Screenshot 2022-06-20 at 10 23 57 PM" src="https://user-images.githubusercontent.com/77568281/174648917-eb89530e-2a19-4842-a6e5-8ed34e1c04f3.png">
 
+# Tech Stack
+<img width="1440" alt="Screenshot 2022-06-20 at 11 02 46 PM" src="https://user-images.githubusercontent.com/77568281/174653589-b2a02122-663a-4603-b9ef-e077ae933844.png">
+
 # Features
 <img width="1440" alt="Screenshot 2022-06-20 at 10 24 00 PM" src="https://user-images.githubusercontent.com/77568281/174648913-e088eb2a-aece-4a43-b2f3-1e87533084b3.png">
 
