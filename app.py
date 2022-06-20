@@ -29,7 +29,7 @@ def index():
                 certainity = ""
             post = [post_content, prediction]
     
-            return render_template ('index.html', prediction = prediction, certainity = certainity, predicted = True)
+            return render_template ('index.html', prediction = prediction, post = post_content, certainity = certainity, predicted = True)
         except:
             return "Error Occurred"
     else:
