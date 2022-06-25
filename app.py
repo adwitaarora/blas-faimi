@@ -26,7 +26,7 @@ def index():
                     prediction, certainity = analyseEnglish([post_content])
             except:
                 prediction = "Could Not Predict"
-                certainity = ""
+                certainity = 0
             post = [post_content, prediction]
     
             return render_template ('index.html', prediction = prediction, post = post_content, certainity = certainity, predicted = True)
