@@ -22,7 +22,7 @@ def index():
                 elif language == 'hi':
                     prediction, certainity = analyseHindi([post_content])
                 else:
-                    post_content = translator.translate(post_content, dest='en')
+                    post_content = translator.translate(post_content, dest='en').text
                     prediction, certainity = analyseEnglish([post_content])
             except:
                 prediction = "Could Not Predict"
