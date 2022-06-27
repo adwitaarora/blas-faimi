@@ -15,7 +15,6 @@ def index():
         post_content = request.form['textContent']
         try:
             language = translator.detect(post_content).lang
-
             try:
                 if language == 'en' :
                     prediction, certainity = analyseEnglish([post_content])
