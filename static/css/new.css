@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap');
+
 * {
     margin: 0;
     color: rgb(62, 62, 62);
@@ -6,7 +7,7 @@
 
 
 
-.backdrop{
+.backdrop {
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -19,39 +20,39 @@
     height: 100%;
 }
 
-.backdrop_top{
+.backdrop_top {
     height: 50%;
     display: flex;
     flex-direction: row-reverse;
 }
 
-.backdrop_bottom{
+.backdrop_bottom {
     height: 50%;
     display: flex;
 }
 
-.circle_top{
+.circle_top {
     width: 40%;
     height: 90%;
     background: #D5C6E0;
     filter: blur(100px);
 }
 
-.circle_bottom__left{
+.circle_bottom__left {
     width: 30%;
     height: 100%;
     background: #FAD2E1;
     filter: blur(100px);
 }
 
-.circle_bottom__right{
+.circle_bottom__right {
     width: 40%;
     height: 100%;
     background: #D0D1FF;
     filter: blur(100px);
 }
 
-.footer{
+.footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -60,12 +61,12 @@
     color: gray;
 }
 
-.links{
+.links {
     width: 30%;
     /* justify-content: space-evenly; */
 }
 
-.links_list{
+.links_list {
     /* width: 30%; */
     display: flex;
     justify-content: space-evenly;
@@ -75,16 +76,17 @@
     padding: 0px;
 }
 
-.links_list li:hover{
+.links_list li:hover {
     cursor: pointer;
     border-bottom: 1px solid black;
 }
 
-.brand_links{
+.brand_links {
     width: 20%;
     font-size: 1.2rem;
 }
-.brand_links__list{
+
+.brand_links__list {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -93,20 +95,20 @@
     padding: 0px;
 }
 
-.brand_links__list li:hover{
+.brand_links__list li:hover {
     cursor: pointer;
 
 }
 
 
 .nav-masthead .nav-link {
-    color: rgba(255, 255, 255, .5);
+    color: grey(81, 79, 79, 0.876);
     border-bottom: .25rem solid transparent;
 }
 
 .nav-masthead .nav-link:hover,
 .nav-masthead .nav-link:focus {
-    border-bottom-color: rgba(255, 255, 255, .25);
+    border-bottom-color: gray(255, 255, 255, .25);
 }
 
 .nav-masthead .nav-link+.nav-link {
@@ -114,8 +116,8 @@
 }
 
 .nav-masthead .active {
-    color: #fff;
-    border-bottom-color: #fff;
+    color: grey;
+    border-bottom-color: grey;
 }
 
 
@@ -169,6 +171,22 @@
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
 }
+
 .sentiment-container {
     max-width: 42em;
+}
+
+.heading-text {
+    font-size: 5rem;
+    background: #8E2DE2;
+    /* fallback for old browsers */
+    background: #A770EF;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FDB99B, #CF8BF3, #A770EF);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FDB99B, #CF8BF3, #A770EF);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
