@@ -1,21 +1,10 @@
-/*
- * Globals
- */
-
-
-/* Custom default button */
 .btn-secondary,
 .btn-secondary:hover,
 .btn-secondary:focus {
     color: #333;
     text-shadow: none;
-    /* Prevent inheritance from `body` */
 }
 
-
-/*
- * Base structure
- */
 
 body {
     background: #141E30;
@@ -29,23 +18,14 @@ body {
 
 .heading-text {
     font-size: 4rem;
-    background: #e2fad6;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #78ffd6, #a8ff78);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #78ffd6, #a8ff78);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background: #B2FEFA;
+    background: -webkit-linear-gradient(to right, #0ED2F7, #B2FEFA);
+    background: linear-gradient(to right, #0ED2F7, #B2FEFA);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 
 }
-
-
-/*
- * Header
- */
 
 .nav-masthead .nav-link {
     color: rgba(255, 255, 255, .5);

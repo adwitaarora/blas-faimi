@@ -30,7 +30,6 @@ def analyseEnglish(test_requests):
         '.', 'keras_saved_model_en_latest.h5', 'processor_state_en_latest.pkl')
     results = classifier.predict(test_requests)
     labels = ['Negative', 'Neutral']
-    print(results)
     for i in range(len(results)):
         for idx, val in enumerate(results[i]):
             if val > 0.4:
