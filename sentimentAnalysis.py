@@ -27,7 +27,7 @@ class CustomModelPrediction(object):
 
 def analyseEnglish(test_requests):
     classifier = CustomModelPrediction.from_path(
-        '.', 'keras_saved_model_en_latest.h5', 'processor_state_en_latest.pkl')
+        '.', 'keras_saved_model_en_1800.h5', 'processor_state_en_1800.pkl')
     results = classifier.predict(test_requests)
     labels = ['Negative', 'Neutral']
     for i in range(len(results)):
